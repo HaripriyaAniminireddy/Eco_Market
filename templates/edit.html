@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <form action="/update/{{ product._id }}" method="post">
+        <input name="name" value="{{ product.name }}" required>
+        <input name="price" type="number" step="0.01" value="{{ product.price }}" required>
+        <input name="description" value="{{ product.description }}" required>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
